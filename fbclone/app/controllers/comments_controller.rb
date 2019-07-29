@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
         if session[:source] == 'home'
           redirect_to root_path
         else
-          redirect_to profile_posts_path
+          redirect_to profile_path(@comment.post.user.username)
         end
 
         # appropriate flash message should be rendered
@@ -40,10 +40,10 @@ class CommentsController < ApplicationController
       if session[:source] == 'home'
         redirect_to root_path 
       else
-        redirect_to profile_posts_path
+        redirect_to profile_path(@comment.post.user.username)
       end
     else
-      redirect_to profile_posts_path
+      redirect_to profile_path(@comment.post.user.username)
     end
   end
 
