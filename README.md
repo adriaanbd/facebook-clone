@@ -2,7 +2,7 @@
 
 > A Facebook replica wherein users can add and remove friends; create, read, edit and remove posts & comments; create, read, remove likes on posts & comments; receive notifications on friend requests, likes and comments; and see a post feed.
 
-![Posts Feed](/docs/fb-clone-feed.png?raw=true)
+![Posts Feed](/docs/fbclone-feed.png?raw=true)
 
 The database schema is based on seven (7) models User, FriendRequest, Friendship, Post, Notification, Comment and Like.
 
