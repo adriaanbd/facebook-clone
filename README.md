@@ -1,63 +1,83 @@
-# Facebook Clone
-Clone of facebook.com using rails 5
+# Maskbook
 
-> Testing our knowedge of MVC by building an a rails 5 app to clone a version of facebook.com. This project will help us implement knowedge of Models, Associations, Valdiation, HTML/CSS and so on.
+> A Facebook replica wherein users can add and remove friends; create, read, edit and remove posts & comments; create, read, remove likes on posts & comments; receive notifications on friend requests, likes and comments; and see a post feed.
 
-## Collaborators 
+![Posts Feed](/docs/fb-clone-feed.png?raw=true)
 
-* Adriaan Beiertz - [@adriaanbd](https://github.com/adriaanbd)
-* Maya Douglas - [@mcrd25](https://github.com/mcrd25/)
+The database schema is based on seven (7) models User, FriendRequest, Friendship, Post, Notification, Comment and Like.
 
-## Project Description
+![Schema](/docs/erd/logical-diagram.png?raw=true)
 
+## Built With
 
-## System Requirements
+- Ruby on Rails
+- PostgreSQL
+- RSpec
+- Capybara
+- FactoryBot
+- DatabaseCleaner
+- Faker
+- Shoulda
+- Figaro
 
+## Live Demo
 
-## Getting started
+This web app is deployed on a free tier of Heroku [here](https://sleepy-tor-12192.herokuapp.com/).
 
-Before cloning repo you should have Postgres installed. You can get various installation instructions [here]()
+## Prerequisites
 
-Once you have PostgreSQL You must create a user with the same name of the app (fb-clone)
+You need:
 
-1. First enter Postgres console
-	```
-	psql postgres
-	```
+* Ruby 2.6.1
+* Rails 5
+* PostgreSQL 11+
 
-2. Next create the database user with whichever password you would like
-	```
-	create role fb-clone with createdb login password 'password1';
-	```
+### Setup
 
-3. You should now see the user on your list of users. Enter `\du` to see the list. (Type `q` to come out of list)
-
-4. You can then come out of PostgreSQL console by typing `\q`
-
----
-
-To get started with the app, clone the repo and then install the needed gems:
-
-```
-$ bundle install --without production
+```bash
+$ git clone https://github.com/adriaanbd/facebook-clone.git
+$ cd facebook-clone
 ```
 
-Next, migrate the database:
+### Install
 
+```bash
+$ bundle install
 ```
+
+### Usage
+
+#### Setup and migrate database
+
+```bash
+$ rails db:setup
 $ rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
+#### Development server
 
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
+```bash
 $ rails server
 ```
 
+### Run tests
 
+```bash
+$ rspec -fd
+```
+
+## Authors
+
+### Adriaan Beiertz
+
+- [GitHub](https://github.com/adriaanbd)
+- [Twitter](https://twitter.com/abeiertz)
+- [LinkedIn](https://linkedin.com/adriaanbd)
+
+### Maya Douglas
+
+- [GitHub](https://github.com/mcrd25/)
+
+## Contributing
+
+Contributions, issues and feature requests are welcome
